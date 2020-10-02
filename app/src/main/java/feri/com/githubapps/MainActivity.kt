@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
         val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
         val searchView = menu?.findItem(R.id.search)?.actionView as SearchView
-        val ubahbahasa= menu?.findItem(R.id.ubah_bahasa)
+        val ubahbahasa = menu?.findItem(R.id.ubah_bahasa)
         ubahbahasa.setOnMenuItemClickListener {
             startActivity(Intent(Settings.ACTION_LOCALE_SETTINGS))
             return@setOnMenuItemClickListener true
@@ -57,8 +57,8 @@ class MainActivity : AppCompatActivity() {
             }
         })
         searchView.setOnCloseListener {
-            if (progressBar.visibility==View.GONE&&rv_search.visibility==View.INVISIBLE){
-                progressBar.visibility=View.GONE
+            if (progressBar.visibility == View.GONE && rv_search.visibility == View.INVISIBLE) {
+                progressBar.visibility = View.GONE
             }
             return@setOnCloseListener true
         }
@@ -66,8 +66,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showDataSearch(newText: String) {
-        progressBar.visibility=View.VISIBLE
         if (newText.length > 0) {
+            progressBar.visibility = View.VISIBLE
             AndroidNetworking.get("https://api.github.com/search/users?q={query}")
                 .addPathParameter("query", newText)
                 .addHeaders(
@@ -79,7 +79,7 @@ class MainActivity : AppCompatActivity() {
                     ResponSearchModel::class.java,
                     object : ParsedRequestListener<ResponSearchModel> {
                         override fun onResponse(response: ResponSearchModel?) {
-                            progressBar.visibility=View.GONE
+                            progressBar.visibility = View.GONE
                             tv_result.text =
                                 getString(R.string.search_ditemukan, response?.totalCount)
                             rv_search.adapter = AdapterUser(
@@ -89,8 +89,9 @@ class MainActivity : AppCompatActivity() {
                         }
 
                         override fun onError(anError: ANError?) {
-                            progressBar.visibility=View.GONE
-                            Toast.makeText(this@MainActivity,anError?.message, Toast.LENGTH_LONG).show()
+                            progressBar.visibility = View.GONE
+                            Toast.makeText(this@MainActivity, anError?.message, Toast.LENGTH_LONG)
+                                .show()
                         }
                     })
             tv_default.visibility = View.GONE
