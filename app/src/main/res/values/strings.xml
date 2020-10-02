@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">GithubApps</string>
+    <string name="search_hint">Tulis nama pengguna</string>
+    <string name="search">Cari</string>
+    <string name="setting">Ubah Bahasa</string>
+    <string name="search_ditemukan">Hasil, ditemukan %1d user yang cocok :</string>
+    <string name="gabung_pada">Bergabung pada %1s-%2s-%3s</string>
+    <string name="tittle_tab_follower">Pengikut</string>
+    <string name="tittle_tab_following">diikuti</string>
+    <string name="lakukan_pencarian_dengan_menekan_tombol_search_diatas">Lakukan pencarian dengan menekan tombol search diatas</string>
+</resources>
