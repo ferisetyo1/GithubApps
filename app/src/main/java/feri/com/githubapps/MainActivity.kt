@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         val ubahbahasa= menu?.findItem(R.id.ubah_bahasa)
         ubahbahasa.setOnMenuItemClickListener {
             startActivity(Intent(Settings.ACTION_LOCALE_SETTINGS))
-            true
+            return@setOnMenuItemClickListener true
         }
 
         searchView.setSearchableInfo(searchManager.getSearchableInfo(componentName))
@@ -56,6 +56,12 @@ class MainActivity : AppCompatActivity() {
                 return false
             }
         })
+        searchView.setOnCloseListener {
+            if (progressBar.visibility==View.GONE&&rv_search.visibility==View.INVISIBLE){
+                progressBar.visibility=View.GONE
+            }
+            return@setOnCloseListener true
+        }
         return true
     }
 
