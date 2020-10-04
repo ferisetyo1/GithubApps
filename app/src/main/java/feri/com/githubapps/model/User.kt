@@ -1,11 +1,11 @@
-package feri.com.githubapps
+package feri.com.githubapps.model
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class ModelUserGeneral(
+data class User(
 
 	@field:SerializedName("gists_url")
 	val gistsUrl: String? = null,

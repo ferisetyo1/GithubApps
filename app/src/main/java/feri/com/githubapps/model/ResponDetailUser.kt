@@ -1,4 +1,4 @@
-package feri.com.githubapps
+package feri.com.githubapps.model
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName

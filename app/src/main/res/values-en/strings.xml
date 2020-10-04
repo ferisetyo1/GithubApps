@@ -5,8 +5,9 @@
     <string name="search">Find</string>
     <string name="setting">Change Language</string>
     <string name="search_ditemukan">Result,%1d matches were found :</string>
-    <string name="gabung_pada">Join at %1s-%2s-%3s</string>
+    <string name="gabung_pada">Join at %1s</string>
     <string name="tittle_tab_follower">Follower</string>
     <string name="tittle_tab_following">Following</string>
     <string name="lakukan_pencarian_dengan_menekan_tombol_search_diatas">Do a search by pressing the search button above</string>
+    <string name="avatar">avatar</string>
 </resources>
