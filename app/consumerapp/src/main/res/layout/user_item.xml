@@ -6,8 +6,8 @@
     <data>
         <import type="android.view.View" />
         <variable
-            name="user"
-            type="feri.com.githubapps.model.User" />
+            name="fav"
+            type="feri.com.consumerapp.database.Favorit" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -32,8 +32,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitXY"
-                android:avatarurl="@{user.avatarUrl}"
-                android:contentDescription="@string/avatar"
+                android:avatarurl="@{fav.avatarUrl}"
+                android:contentDescription="foto"
                 tools:srcCompat="@tools:sample/avatars" />
         </androidx.cardview.widget.CardView>
 
@@ -42,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="@{user.login}"
+            android:text="@{fav.login}"
             tools:text="Supriadi"
             android:textSize="18sp"
             android:textStyle="bold"

@@ -1,12 +1,9 @@
 package feri.com.githubapps.utils
 
 import android.annotation.SuppressLint
-import android.provider.SyncStateContract
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
-import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import feri.com.githubapps.R
 import java.text.SimpleDateFormat
@@ -30,7 +27,7 @@ object Helpers {
     }
 
     @JvmStatic
-    @BindingAdapter("android:src")
+    @BindingAdapter("android:avatarurl")
     fun setImageUrl(view: ImageView?, icon: String?) {
         if (view != null && icon != null) {
             Glide.with(view.context).load(icon).into(view)

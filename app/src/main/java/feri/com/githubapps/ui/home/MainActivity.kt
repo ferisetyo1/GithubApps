@@ -5,7 +5,6 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.provider.Settings
 import android.view.Menu
 import android.view.View
 import android.view.inputmethod.InputMethodManager
@@ -19,6 +18,7 @@ import feri.com.githubapps.model.ResponSearchUser
 import feri.com.githubapps.network.ApiListener
 import feri.com.githubapps.shared.getViewModel
 import feri.com.githubapps.ui.adapter.AdapterUser
+import feri.com.githubapps.ui.setting.Setting
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.Job
 
@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity(), ApiListener {
         val searchView = menu?.findItem(R.id.search)?.actionView as SearchView
         val ubahbahasa = menu.findItem(R.id.ubah_bahasa)
         ubahbahasa.setOnMenuItemClickListener {
-            startActivity(Intent(Settings.ACTION_LOCALE_SETTINGS))
+            startActivity(Intent(this,Setting::class.java))
             return@setOnMenuItemClickListener true
         }
 

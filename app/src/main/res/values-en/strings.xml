@@ -10,4 +10,8 @@
     <string name="tittle_tab_following">Following</string>
     <string name="lakukan_pencarian_dengan_menekan_tombol_search_diatas">Do a search by pressing the search button above</string>
     <string name="avatar">avatar</string>
+    <string name="pengingat_tiap_pukul_09_00">Reminder every 09:00</string>
+    <string name="appwidget_text">Favorit Profils</string>
+    <string name="add_widget">Add widget</string>
+    <string name="empty_text">No Data</string>
 </resources>

@@ -11,7 +11,8 @@
     <group android:menuCategory="container">
         <item android:id="@+id/ubah_bahasa"
             android:title="@string/setting"
+            android:icon="@drawable/ic_baseline_settings_24"
             android:iconTint="#fff"
-            app:showAsAction="never" />
+            app:showAsAction="always" />
     </group>
 </menu>
