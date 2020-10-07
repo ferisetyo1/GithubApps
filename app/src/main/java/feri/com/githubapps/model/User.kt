@@ -2,6 +2,7 @@ package feri.com.githubapps.model
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import feri.com.githubapps.data.localDb.Favorit
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize

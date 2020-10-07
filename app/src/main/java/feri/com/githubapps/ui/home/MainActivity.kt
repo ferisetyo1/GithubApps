@@ -18,6 +18,7 @@ import feri.com.githubapps.model.ResponSearchUser
 import feri.com.githubapps.network.ApiListener
 import feri.com.githubapps.shared.getViewModel
 import feri.com.githubapps.ui.adapter.AdapterUser
+import feri.com.githubapps.ui.favorit.MyFavorit
 import feri.com.githubapps.ui.setting.Setting
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.Job
@@ -68,8 +69,13 @@ class MainActivity : AppCompatActivity(), ApiListener {
         val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
         val searchView = menu?.findItem(R.id.search)?.actionView as SearchView
         val ubahbahasa = menu.findItem(R.id.ubah_bahasa)
+        val favorit = menu.findItem(R.id.favorit)
         ubahbahasa.setOnMenuItemClickListener {
-            startActivity(Intent(this,Setting::class.java))
+            startActivity(Intent(this, Setting::class.java))
+            return@setOnMenuItemClickListener true
+        }
+        favorit.setOnMenuItemClickListener {
+            startActivity(Intent(this, MyFavorit::class.java))
             return@setOnMenuItemClickListener true
         }
 

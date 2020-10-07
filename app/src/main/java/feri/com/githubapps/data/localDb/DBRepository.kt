@@ -1,6 +1,7 @@
 package feri.com.githubapps.data.localDb
 
 import android.app.Application
+import androidx.lifecycle.LiveData
 import feri.com.githubapps.model.ResponDetailUser
 
 class DBRepository(application: Application) {
@@ -19,7 +20,7 @@ class DBRepository(application: Application) {
     fun getAllFav(): ArrayList<Favorit> {
         val favList = ArrayList<Favorit>()
         val data = cdao?.findAll()
-        while (data?.moveToNext()!!){
+        while (data?.moveToNext()!!) {
             favList.add(
                 Favorit(
                     data.getString(data.getColumnIndex("login")),
@@ -29,6 +30,8 @@ class DBRepository(application: Application) {
         }
         return favList
     }
+
+    fun getAllFav_Live(): LiveData<List<Favorit>?>? = dao?.getAll()
 
     fun insertFav(user: ResponDetailUser) {
         println(user.toString())

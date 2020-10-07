@@ -90,26 +90,9 @@ class DetailUser : AppCompatActivity(), ApiListener {
 
     private fun setToolbar() {
         activityDetailUserBinding.toolbar.setTitle(intent.getStringExtra("nama"))
-        activityDetailUserBinding.toolbar.setNavigationIcon(
-            ResourcesCompat.getDrawable(
-                resources,
-                R.drawable.ic_baseline_arrow_back_24, null
-            )
-                ?.apply {
-                    setTint(
-                        ResourcesCompat.getColor(
-                            resources,
-                            android.R.color.black,
-                            null
-                        )
-                    )
-                })
-        activityDetailUserBinding.toolbar.setNavigationOnClickListener(object :
-            View.OnClickListener {
-            override fun onClick(p0: View?) {
-                onBackPressed()
-            }
-        })
+        activityDetailUserBinding.toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
     }
 
     override fun onSuccess(message: String) {
