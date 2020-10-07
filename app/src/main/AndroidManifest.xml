@@ -39,13 +39,7 @@
 
         <activity android:name=".ui.setting.Setting" />
         <activity android:name=".ui.detailuser.DetailUser" />
-        <activity android:name=".ui.home.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".ui.home.MainActivity" />
 
         <receiver
             android:name=".shared.AlarmReceiver"
